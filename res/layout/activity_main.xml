@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/labIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="IP或者域名：" />
+
+    <EditText
+        android:id="@+id/edtIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/labPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="端口：" />
+
+    <EditText
+        android:id="@+id/edtPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="5"
+        android:singleLine="true"
+        android:text="80" />
+
+    <TextView
+        android:id="@+id/labPortType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="端口类型：" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="5dip"
+            android:text="TCP" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:text="UDP" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始检测" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text=""
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/labReadme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:textColor="#0000FF" 
+        android:text="注意:TCP端口测试结果通常可信,UDP端口测试结果仅供参考(无连接协议特性决定无法准确探测)" />
+</LinearLayout>
